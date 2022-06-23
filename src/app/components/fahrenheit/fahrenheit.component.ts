@@ -8,20 +8,20 @@ import { ConverterService } from 'src/app/services/converter.service';
 })
 export class FahrenheitComponent implements OnInit {
 
-  value: number = 0;
+  // value: number = 0;
 
-  constructor(private convServ: ConverterService) {
-    convServ.fahrenheitValue().subscribe({
-      next: v => this.value = v,
-      error: err => console.log(err)
-    })
+  constructor(public convServ: ConverterService) {
+    // convServ.fahrenheitValue().subscribe({
+    //   next: v => this.value = v,
+    //   error: err => console.log(err)
+    // })
   }
 
   ngOnInit(): void {
   }
 
-  valueChanged(): void {
-    this.convServ.nextFahrenheit(this.value);
-  }
+  // valueChanged(): void {
+  //   this.convServ.nextFahrenheit(this.value);
+  // }
 
 }
